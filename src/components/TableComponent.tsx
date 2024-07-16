@@ -17,13 +17,6 @@ export default function TabelComponet<T extends GridValidRowModel>({ columns, da
     : undefined,
   }));
 
-  const handleEdit = (id: number) => {
-   
-  };
-
-  const handleDelete = (id: number) => {
-    // Lógica para deletar o usuário
-  };
   return (
       <DataGrid
         rows={data}
