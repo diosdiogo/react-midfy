@@ -31,7 +31,7 @@ const createCustomer = async (customer: Omit<CustomersData, 'id'>): Promise<numb
         
         return new Error('Erro ao listar os registors.')
     } catch(error) {
-        return new Error((error as {message: string}).message || 'Erro ao listar os registors.')
+        return new Error((error as {message: string}).message || 'Erro ao registar dados.')
     }
 }
 const updateCustomer = async (id: number, customer: CustomersData): Promise<void | Error> => {
@@ -39,7 +39,7 @@ const updateCustomer = async (id: number, customer: CustomersData): Promise<void
         const Url = `customers/${id}`
         await Api.put<CustomersData>(Url, customer)
     } catch(error) {
-        return new Error((error as {message: string}).message || 'Erro ao listar os registors.')
+        return new Error((error as {message: string}).message || 'Erro ao atualizar registors.')
     }
 }
 const deleteCustomer = async (id: number): Promise<void | Error> => {
@@ -47,7 +47,7 @@ const deleteCustomer = async (id: number): Promise<void | Error> => {
         const Url = `customers/${id}`
         await Api.delete<CustomersData>(Url)
     } catch(error) {
-        return new Error((error as {message: string}).message || 'Erro ao listar os registors.')
+        return new Error((error as {message: string}).message || 'Erro ao deletar registors.')
     }
 }
 
