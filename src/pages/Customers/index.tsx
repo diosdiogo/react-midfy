@@ -59,7 +59,6 @@ export default function Customers() {
     setAlert({ ...alert, isOpen: false });
   };
 
-
   function handleEdit(row: CustomersData): void {
     setOpen(true);
     setInitialEdit({
@@ -68,8 +67,6 @@ export default function Customers() {
       createdAt: row.createdAt,
       avatar: row.avatar
     });
-
-    console.log(row)
   }
 
   const handleClose = () => {
