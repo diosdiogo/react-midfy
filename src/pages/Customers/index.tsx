@@ -213,7 +213,7 @@ export default function Customers() {
                             value={values.id}
                             onChange={(e) => {
                               const { value } = e.target;
-                              const numericValue = value.replace(/\D/g, ''); // Remove non-numeric characters
+                              const numericValue = value.replace(/\D/g, '');
                               handleChange({
                                 target: {
                                   name: 'id',
